@@ -1,0 +1,18 @@
+extends layout
+
+block content
+    h1= title
+    div.newemployee
+        form( method="post")
+            div
+                div
+                    span.label Title :
+                    input(type="text", name="title", id="editEmployeeTitle", class="form-control", placeholder="enter title")
+                div
+                    span.label Name :
+                    input(type="text", name="name", id="editEmployeeName", class="form-control", placeholder="enter name")
+                  p(style='white-space:pre;')
+                    div#editEmployeeSubmit
+                    p(style='white-space:pre;')
+                      input(type="submit", class="btn btn-primary btn-lg", value="Save")
+        a(href="/")!= "Back to Employee List"
